@@ -1,0 +1,21 @@
+#INICIO|Abres los ojos enceguecido por una luz brillante, ¡Era el sol!|100
+*DORMIR|Continuar durmiendo. Ese sol no va a interrumpir de tu placido descanso al aire libre.
+*DESPERTARSE|¡Levantarte y descubre tu alrededor! ¡Seguro que hay maravillas, tesoros, aventura! ¡¡Incluso podrías encontrar lo que más deseas en el mundo!!
+
+#DORMIR|Intentas bloquear el sol con tus manos para así continuar durmiendo, desafortunadamente la luz era muy invasiva y no había nada a tu alrededor para cubrirte\nTe despiertas de todos modos y comienzas tu aventura.
+*CONTINUAR|Si
+
+#DESPERTARSE|¡Decides levantarte y emprender hacia una nueva aventura!
+*CONTINUAR|Si
+
+
+
+#PUZZLE|Encuentras un texto antiguo tallado en un muro de piedra lleno de polvo pero aun era legible.
+El texto decía:
+"Para aquellos aventureros con hambre de nuevos saberes, el siguente acertijo resolver debes:
+Si un elefante viaja en un monopatín a 30km/h, toma una rampa con un angulo de 83.92°, la luna mueve las mareas y..."
+Casi te quedas dormido leyendo el primer renglón de los 25 que había.
+
+*RANDOM|Elegir cualquier opción. ¿Qué loco se va a tomar la molestia de leer todo e intentar resolverlo? Seguro que no hay respuesta correcta, cualquier opción servirá.
+*OTROCAMINO|¿¡Qué!? ¿¡Hacer una cuenta!? ¿¡Estamos locos!? ¡No! ¡Seguro que hay otro camino! ¡¡O incluso uno mejor!!
+*DESEPERACION|¿¡Cómo!? ¿¡Había examen!? ¡¡No estudieeee!! ¡Tiene que hacer una salida! ¡Seguro que buscando encuentro la respuesta!
