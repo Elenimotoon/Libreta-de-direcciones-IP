@@ -126,7 +126,19 @@ boton_ping.place (x= X_pos[4], y= Y_etiqu [0],)
 boton_ping.config(bg= Azul_Cielo,
                     font= tam_letr_bot )
 
+# accion del boton "ping" (no pude hacer que el usuario ingrese una variable o un input)
+import subprocess
+import platform
 
+
+def ping(host):
+    parametro = '-n' if platform.system().lower() == 'windows' else '-c'
+    comando = ['ping',parametro,'4',host]
+   
+    subprocess.call(comando)
+
+
+ping('192.168.0.1')
 
 
 ventana.mainloop()
