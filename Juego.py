@@ -6,7 +6,7 @@ from Personaje import Personaje
 
 personaje = Personaje()
 escenarioActual = None
-final= False
+final = False
 escenarios = {}
 
 with io.open('EscenariosPrincipales.txt', 'r', encoding='utf8') as archivo:
@@ -32,9 +32,9 @@ with io.open('EscenariosPrincipales.txt', 'r', encoding='utf8') as archivo:
                     
             e = Escenario(partesEscenario[1], opciones)
             
-            if (2 < len(partesEscenario)):
-                e.cambiosSupervivencia = int(partesEscenario[2])
-                escenarios[partesEscenario[0]] = e
+            if 2 < len(partesEscenario):
+                e.cambiosSalud = int(partesEscenario[2])
+            escenarios[partesEscenario[0]] = e
 
 escenarioActual = escenarios['INICIO']
 

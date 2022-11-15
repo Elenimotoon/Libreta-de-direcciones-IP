@@ -8,6 +8,7 @@
 #DESPERTARSE|¡Decides levantarte y emprender hacia una nueva aventura!
 *CONTINUAR|Si
 
+#CONTINUAR|Moriste|-1000
 
 
 #PUZZLE|Encuentras un texto antiguo tallado en un muro de piedra lleno de polvo pero aun era legible.

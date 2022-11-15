@@ -1,23 +1,37 @@
+from os import system
+
 class Escenario:
-    def __init__(self , descripcion , opciones):
+    def __init__(self, descripcion, opciones):
         self.descripcion = descripcion
         self.opciones = opciones
-        self.cambiosSupervivencia = 0
+        self.cambiosSalud = 0
     
     def presentar(self, personaje):
         print('\n')
-        print(personaje.obtenerEstado())
+        print(personaje.SaludPersonaje())
         print(self.descripcion)
         
-        personaje.supervivencia += self.cambiosSupervivencia
+        personaje.salud += self.cambiosSalud
         
-        if personaje.supervivencia <= 0:
-            print("La haz palmado, tío...\n\n¿Quieres intentarlo otra vez?")
-            personaje.supervivencia = 0
+        if personaje.salud <= 0:
+            new_game = True
+            
+            while new_game:
+                eleccion = input("La haz palmado, tío...\n\n¿Quieres intentarlo otra vez?\ny/n\n")
+                match eleccion:
+                    case "n":
+                        raise SystemExit(0)
+                    case "y":
+                        system("CLS")
+                        new_game = False
+                    case _:
+                        print('¡Selección invalida! Vuelve a intentarlo.')
+            
+            personaje.salud = 0
             return 'INICIO'
         
         for i in range(len(self.opciones)):
-            print("[" + str(i) + "] " + self.opciones[i].descripcion)
+            print(f"[{i}] {self.opciones[i].descripcion}")
         
         error = True
         
