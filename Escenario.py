@@ -1,5 +1,7 @@
 from os import system
 
+pre_guardado = []
+
 class Escenario:
     def __init__(self, descripcion, opciones):
         self.descripcion = descripcion
@@ -7,22 +9,24 @@ class Escenario:
         self.cambiosSalud = 0
     
     def presentar(self, personaje):
-        print('\n')
-        print(personaje.SaludPersonaje())
-        print(self.descripcion)
         
         personaje.salud += self.cambiosSalud
+        
+        decisiones = f'\n{personaje.SaludPersonaje()}\n{self.descripcion}'
+        pre_guardado.append(decisiones)
+        print(decisiones)
         
         if personaje.salud <= 0:
             new_game = True
             
             while new_game:
-                eleccion = input("La haz palmado, tío...\n\n¿Quieres intentarlo otra vez?\ny/n\n")
-                match eleccion:
+                eleccion_letras = input("La haz palmado, tío...\n\n¿Quieres intentarlo otra vez?\ny/n\n")
+                match eleccion_letras:
                     case "n":
                         raise SystemExit(0)
                     case "y":
                         system("CLS")
+                        del pre_guardado[:]
                         new_game = False
                     case _:
                         print('¡Selección invalida! Vuelve a intentarlo.')
@@ -31,21 +35,28 @@ class Escenario:
             return 'INICIO'
         
         for i in range(len(self.opciones)):
-            print(f"[{i}] {self.opciones[i].descripcion}")
+            elecciones = f"[{i}] {self.opciones[i].descripcion}"
+            pre_guardado.append(elecciones)
+            print(elecciones)
         
         error = True
+        repeticion = False
         
         while error:
-            eleccion = input()
+            eleccion_numero = input()
             
-            if eleccion.isnumeric():
-                eleccion = int(eleccion)
+            if eleccion_numero.isnumeric():
+                eleccion_numero = int(eleccion_numero)
                 
-                if eleccion < len(self.opciones):
+                if eleccion_numero < len(self.opciones):
                     error = False
             
             if error:
+                repeticion = True
                 print('¡Selección invalida! Vuelve a intentarlo.')
             
             if not error:
-                return self.opciones[eleccion].siguienteFragmento
+                if repeticion:
+                    system("CLS")
+                    print("\n".join(pre_guardado))
+                return self.opciones[eleccion_numero].siguienteFragmento
