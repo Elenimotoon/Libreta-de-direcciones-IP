@@ -1,0 +1,94 @@
+#INICIO|Abres los ojos enceguecido por una luz brillante, ¡Era el sol!|100
+*DORMIR|Continuar durmiendo. Ese sol no va a interrumpir de tu placido descanso al aire libre.
+*DESPERTARSE|¡Levantarte y descubre tu alrededor! ¡Seguro que hay maravillas, tesoros, aventura! ¡¡Incluso podrías encontrar lo que más deseas en el mundo!!
+
+#DORMIR|Intentas bloquear el sol con tus manos para así continuar durmiendo, desafortunadamente la luz era muy invasiva y no había nada a tu alrededor para cubrirte
+Te despiertas de todos modos y comienzas tu aventura.
+*CONTINUAR|Ir al pueblo a por provisiones
+
+#DESPERTARSE|¡Decides levantarte y emprender hacia una nueva aventura!
+*PUEBLO|Ir al pueblo a por provisiones
+
+#PUEBLO|Decides ir al mercado del pueblo a por algo de comida antes de aventurarte por ahí.
+
+En lo que comprabas algo para el camino, escuchas a un par de hombres murmurar sobre un tesoro escondido, así que decides acercarte a ellos y preguntar sobre aquella leyenda. Según dijeron solo era eso, una leyenda, y que si fuera real sería muy peligroso.
+Tu no te lo crees. Piensas que te están intentando sacar del camino así solo ellos se quedan con el tesoro, así que decides ir a investigar por tu cuenta
+*CONTINUAR|Continuar
+
+#CONTINUAR|Según dijeron, la leyenda contaba que entre el abismo del reino del cielo y las nubes, donde todo es pequeño y "El Grande" controla el cielo, los mares y todo lo que los rodea, incluida sus desgracias como sus virtudes, se alza cada milenio para demostrar su grandeza, gratificando a quienes los respetan y arrojando al vacío a quienes lo retan. Y por las especificaciones que dieron sobre aquél lugar, estaba a unas horas de donde salías descansar al aire libre sobre el pasto sobre las montañas; lugar que habrás visto alguna vez pero nunca le habrás dado importancia ya que apenas se veía hasta donde llega la vista, pero ahora tenías un motivo.
+Sin pensártelo mucho emprendes viaje hacia ese lugar, partiendo de tu lugar favorito para dormir hacia el lugar de la leyenda.
+
+Bajando la montaña ves dos caminos en frente tuyo, uno era el sendero común, aunque parecía ser el más largo, y otro era una especie de cueva, que quizá podría llevarte o no al camino principal, lo único que tenías claro es que sería más emocionante
+*SENDERO|Aunque sea el camino más largo, por lo menos estoy seguro que si o si voy a llegar al lugar de la leyenda
+*CUEVA|¡Vine a por una aventura emocionante, así que la tendré! Además, ¡Podría encontrar algo en el camino para enfrentarme contra "El Grande"!
+
+#SENDERO|Tomas el camino más largo|-1000
+
+#CUEVA|Te adentras en la cueva, caminando por donde pasaba la luz y encuentras un texto antiguo tallado en un muro de piedra lleno de polvo pero aun era legible.
+El texto decía:
+"Para aquellos aventureros con hambre de nuevos saberes, el siguiente acertijo resolver debes:
+Si un elefante viaja en un monopatín a 30km/h, toma una rampa con un ángulo de 83.92°, la luna mueve las mareas y..."
+Casi te quedas dormido leyendo el primer renglón de los 25 que había.
+*RANDOM|Elegir cualquier opción. ¿Qué loco se va a tomar la molestia de leer todo e intentar resolverlo? Seguro que no hay respuesta correcta, cualquier opción servirá.
+*OTROCAMINO|¡¿Qué?! ¡¿Hacer una cuenta?! ¡¿Estamos locos?! ¡No! ¡Seguro que hay otro camino! ¡¡O incluso uno mejor!!
+*DESEPERACION|¡¿Cómo?! ¡¿Había examen?! ¡¡No estudiéééé!! ¡Tiene que haber una salida! ¡Seguro que buscando encuentro la respuesta!
+
+#RANDOM|Presionas un botón a lo loco, casi sin pensartelo dos veces y sin pensar en las consecuencias. Luego escuchas un click...
+¡Relusta que estabas en lo correcto! ¡Un muro a tu lado se abrio dejandote pasar una puerta oculta!
+*SUERTE|Si
+
+#OTROCAMINO|Reacio a resolver el puzzle, decides pasar de él y buscar algo mejor... Lo que sea que eso signifique
+*SENDERO|Si
+
+#DESEPERACION|Negandote a resolver el puzzle decides buscar otra salida buscando algo por alrededor que te ayude a superarlo, quizá la respuesta se encontraba escondida
+*HUSMEAR|Buscar entre las piedras, ramas, quizá algún interruptor oculto
+
+#HUSMEAR|Buscando encuentras una rama chica y fragil, ¿Decides tomarla?
+*TOMARLA1|Puede que me sirva más adelante
+*NOTOMARLA1|Es solo una simple rama, no la voy a necesitar
+
+#TOMARLA1|La guardas en tu inventario
+*SEGUIR1|Continuar
+
+#NOTOMARLA1|Sigues tu camino buscando algo más útil
+*SEGUIR1|Continuar
+
+#SEGUIR1|Buscando encuentras un canto, ¿Decides tomarlo?
+*TOMARLA2|Puede que me sirva más adelante
+*NOTOMARLA2|Es solo una piedra, no me va a servir de mucho
+
+#TOMARLA2|Lo guardas en tu inventario
+*SEGUIR2|Continuar
+
+#NOTOMARLA2|Sigues tu camino buscando algo más útil
+*SEGUIR2|Continuar
+
+#SEGUIR2|Buscando encuentras pedazo de tronco muy robusto aunque algo pesado, ¿Decides tomarlo?
+*TOMARLA3|Puede que me sirva más adelante
+*NOTOMARLA3|Es muy pesado, me va a agarrar una hernia si lo llevo
+
+#TOMARLA3|Lo guardas en tu inventario
+*SEGUIR3|Continuar
+
+#NOTOMARLA3|Sigues tu camino buscando algo más útil
+*SEGUIR3|Continuar
+
+#SEGUIR3|Buscando ves a lo lejos algo extraño oculto en la oscuridad pero no sabes lo que es, además de que está un poco lejos, ¿Quieres descubirlo?
+*PELIGRO|Tirarle algo
+*NOPELIGRO|Puede ser peligroso, mejor sigo buscando en otro lado
+
+#PELIGRO|Sacas el canto que habías guardado en tu inventario y se lo lanzas, para luego descubrir que se trataba de un venado y que lo habías hecho enfadar...
+Aunque intentastes escapar ya era demaciado tarde, el venado corrió hacia ti y te envistió, tirandote fuertemente contra el suelo, y para tu mala suerte, con una de sus patas traseras aplastó tu craneo y te terminó matando...|-1000
+
+#NOPELIGRO|Quizá era la opción más cobarde o quizá la más lista, pero saliste pitando de allí sin pensar mucho qué era lo que te estaba observando
+*CONTINUAR2|Continuar
+
+#CONTINUAR2|Luego de tu "emocionante aventura con lo desconocido" te planteas si seguir buscando o no
+*BUSCAR|Continuar buscano, tiene que estar la solución en algún lado
+*NOBUSCAR|Creo que no voy a encontrar más cosas, este lugar está muy vacío
+
+#BUSCAR|Decides continuar, tocando las paredes buscando algún interruptor, a pesar de estar metiendote en la oscuridad creyendo que sería más probable que lo ocultaran, y sin date cuenta terminaste callendo a un pozo lo suficientemente profundo para que cualquiera se mate|-1000
+
+#NOBUSCAR|Vuelves al arcertijo y revisas tu inventario viendo si podías probar a entrar
+*INTENTARLO|Algo de lo que tengo me tiene que servir para entrar
+*OTROCAMINO|Definitivamente no hay nada en este lugar que me ayude a esquivar este puzzle y no voy a intentar hacerlo
