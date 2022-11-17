@@ -1,3 +1,5 @@
 *.jpg
+*.gif
 *.pyc
 ag.txt
+*.db
