@@ -78,7 +78,7 @@ Casi te quedas dormido leyendo el primer renglón de los 25 que había.
 *NOPELIGRO|Puede ser peligroso, mejor sigo buscando en otro lado
 
 #PELIGRO|Sacas el canto que habías guardado en tu inventario y se lo lanzas, para luego descubrir que se trataba de un venado y que lo habías hecho enfadar...
-Aunque intentastes escapar ya era demaciado tarde, el venado corrió hacia ti y te envistió, tirandote fuertemente contra el suelo, y para tu mala suerte, con una de sus patas traseras aplastó tu craneo y te terminó matando...|-1000
+Aunque intentastes escapar ya era demasiado tarde, el venado corrió hacia ti y te envistió, tirandote fuertemente contra el suelo, y para tu mala suerte, con una de sus patas traseras aplastó tu craneo y te terminó matando...|-1000
 
 #NOPELIGRO|Quizá era la opción más cobarde o quizá la más lista, pero saliste pitando de allí sin pensar mucho qué era lo que te estaba observando
 *CONTINUAR2|Continuar
@@ -87,7 +87,7 @@ Aunque intentastes escapar ya era demaciado tarde, el venado corrió hacia ti y 
 *BUSCAR|Continuar buscano, tiene que estar la solución en algún lado
 *NOBUSCAR|Creo que no voy a encontrar más cosas, este lugar está muy vacío
 
-#BUSCAR|Decides continuar, tocando las paredes buscando algún interruptor, a pesar de estar metiendote en la oscuridad creyendo que sería más probable que lo ocultaran, y sin date cuenta terminaste callendo a un pozo lo suficientemente profundo para que cualquiera se mate|-1000
+#BUSCAR|Decides continuar, tocando las paredes buscando algún interruptor, a pesar de estar metiendote en la oscuridad creyendo que sería más probable que lo ocultaran, y sin darte cuenta terminaste cayendo a un pozo lo suficientemente profundo para que cualquiera se mate|-1000
 
 #NOBUSCAR|Vuelves al arcertijo y revisas tu inventario viendo si podías probar a entrar
 *INTENTARLO|Algo de lo que tengo me tiene que servir para entrar
