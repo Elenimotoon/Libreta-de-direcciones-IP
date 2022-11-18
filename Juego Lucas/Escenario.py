@@ -21,17 +21,17 @@ class Escenario:
             
             while new_game:
                 eleccion_letras = input("La haz palmado, tío...\n\n¿Quieres intentarlo otra vez?\ny/n\n")
-                match eleccion_letras:
-                    case "n":
+                match eleccion_letras.upper():
+                    case "N" | "NO":
                         raise SystemExit(0)
-                    case "y":
-                        system("CLS")
+                    case "Y" | "YES" | "S" | "SI" | "SÍ":
+                        system("clear")
                         del pre_guardado[:]
                         new_game = False
                     case _:
                         print('¡Selección invalida! Vuelve a intentarlo.')
             
-            personaje.salud = 0
+            personaje.salud = 100
             return 'INICIO'
         
         for i in range(len(self.opciones)):
@@ -57,6 +57,7 @@ class Escenario:
             
             if not error:
                 if repeticion:
-                    system("CLS")
+                    system("clear")
                     print("\n".join(pre_guardado))
+                system("clear -x")
                 return self.opciones[eleccion_numero].siguienteFragmento

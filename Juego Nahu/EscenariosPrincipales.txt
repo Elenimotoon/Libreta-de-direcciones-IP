@@ -1,54 +1,78 @@
-Prologo:
-"Una noche cualquiera, nuestro personaje se va a dormir, y luego de dormir, el siente que se despierta, pero se despierta en una realidad totalmente diferente, al ir a su armario, se encuentra con prendas de un origen desconocido y medianamente antiguas, las cuales se termina por poner, luego de salir de su hogar, se encuentra en un mundo distinto, en una aldea remota, luego de salir de esa aldea, nuestro personaje se pierde en un bosque, y a partir de ahí, comienza su aventura para poder volver a su mundo real
-Lograra hacerlo?"
+{
+    "TITLE": "Return: Mi travesía de volver a casa",
+    "MAX_HEALTH": 10,
+    "LIVE_BAR_SYMBOL": "█",
+    "SIZE_SYMBOL": 20,
+}
 
-Titulo del juego "Return:Mi travesía de volver a casa"
+{
+    "PLAY": "Jugar",
+    "OPTIONS": {
+        "NAME": "Opciones",
+        "DETAILS": {
+            "VOLUME": "Volumen",
+            "TEXT_SIZE": 16
+        }
+    },
+    "CREDITS": "Le agradezco a Python por dejarme programarle",
+    "EXIT": "Salir",
+}
 
-1) Jugar
-2) Opciones
-3) Créditos
-4) Salir 
-
-
-Capitulo 1:"El bosque de las almas perdidas"
-
-"Acabo de perderme en este bosque, lo único que escucho mas alla de mis propios pasos son
-gritos de almas, desesperadas por volver a la vida, parece que estan sufriendo una horrible 
-pesadilla sin poder descansar en paz"
-
-"Muchas de estas palabras, estan en idiomas que desconozco, ni siquiera estan hablando en
-Español o Ingles, podría llegar a decir que estas estan en un idioma tan antiguo como este
-lugar"
-
-(Encontraste una nota, "El sucumbir de las almas desesperadas")
-
-1) Tomar nota
-2) Dejar
-
-1) (Tomaste un objeto)
-
-3) Inventario
-
-1) Nota "El sucumbir de las almas desesperadas"
-
-"Que hago?"
-1) Leer
-2) Soltar
-3) ignorar/salir
-
-(Opcion 1)
-"Se dice que este bosque esta maldito y tiene la horrible fama y reconocimiento
-de ser el bosque preferido por la gente para cometer actos suicidas, rituales prohibidos y
-sacrificios (tanto de animales como de humanos),los pueblerinos cruzan este lugar con
-muchísimo miedo y, a lo largo del trayecto, se dice que se puede escuchar a estas almas 
-sufrir un calvario eterno, causando el terror de todas las personas que los oyen"
-
-(El resto de las hojas estan manchadas de una especie muy rara de tinta, junto con formas
-extrañas, a las que presumo son palabras para rituales)
-
-"Mientras terminaba de leer las notas, en la parte de la escritura extraña,
-escucho unos gritos terroríficos en mis oídos, creo que son las almas pidiéndome por favor
-que deje de leer"
-
-
-
+{
+    "PROLOG": "Una noche cualquiera, nuestro personaje se va a dormir, y luego de dormir, el siente que se despierta, pero se despierta en una realidad totalmente diferente, al ir a su armario, se encuentra con prendas de un origen desconocido y medianamente antiguas, las cuales se termina por poner, luego de salir de su hogar, se encuentra en un mundo distinto, en una aldea remota, luego de salir de esa aldea, nuestro personaje se pierde en un bosque, y a partir de ahí, comienza su aventura para poder volver a su mundo real\n¿Logrará hacerlo?",
+    "CHAPTER_1": {
+        "NAME": "El bosque de las almas perdidas",
+        "STORYTELLER": "",
+        "INTERNAL_VOICE": "Acabo de perderme en este bosque, lo único que escucho mas alla de mis propios pasos son\ngritos de almas, desesperadas por volver a la vida, parece que estan sufriendo una horrible\n pesadilla sin poder descansar en paz\n\nMuchas de estas palabras, estan en idiomas que desconozco, ni siquiera estan hablando en\nEspañol o Ingles, podría llegar a decir que estas estan en un idioma tan antiguo como este\nlugar",
+        "PROTAGONIST_DIALOGUE", "",
+        "OPTIONAL_TEXT": "(Encontraste una nota, 'El sucumbir de las almas desesperadas')",
+        "OPTIONS": {
+            {
+                "NAME": "Tomar nota",
+                "ACTIONS": "(Tomaste un objeto)\n\nNota 'El sucumbir de las almas desesperadas'",
+                "OPTIONAL_TEXT": "¿Qué hago?",
+                "OPTIONS": {
+                    {
+                        "NAME": "Leer",
+                        "ACTIONS": "'Se dice que este bosque esta maldito y tiene la horrible fama y reconocimiento\nde ser el bosque preferido por la gente para cometer actos suicidas, rituales prohibidos y\n sacrificios (tanto de animales como de humanos), los pueblerinos cruzan este lugar con\n muchísimo miedo y, a lo largo del trayecto, se dice que se puede escuchar a estas almas\n sufrir un calvario eterno, causando el terror de todas las personas que los oyen'",
+                        "INTERNAL_VOICE": "(El resto de las hojas estan manchadas de una especie muy rara de tinta, junto con formas\nextrañas, a las que presumo son palabras para rituales)",
+                        "OPTIONAL_TEXT": "Mientras terminaba de leer las notas, en la parte de la escritura extraña,\nescucho unos gritos terroríficos en mis oídos, creo que son las almas pidiéndome por favor\nque deje de leer"
+                    },
+                    {
+                        "NAME": "Soltar",
+                        "ACTIONS": ""
+                    },
+                    {
+                        "NAME": "Ignorar/Salir",
+                        "ACTIONS": ""
+                    },
+                }
+            },
+            {
+                "NAME": "Dejar",
+                "ACTIONS": "",
+                "OPTIONAL_TEXT": "",
+                "OPTIONS": {}
+            },
+            {
+                "NAME": "Inventario",
+                "ACTIONS": "",
+                "OPTIONAL_TEXT": "",
+                "OPTIONS": {}
+            },
+        }
+    },
+    "CHAPTER_2": {
+        "NAME": "",
+        "STORYTELLER": "",
+        "INTERNAL_VOICE": "",
+        "PROTAGONIST_DIALOGUE", "",
+        "OPTIONAL_TEXT": "",
+        "OPTIONS": {
+            {
+                "NAME": "",
+                "ACTIONS": ""
+            }
+        }
+    },
+}
