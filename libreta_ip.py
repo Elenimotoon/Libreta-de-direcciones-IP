@@ -4,7 +4,7 @@ import tkinter as tk
 from tkinter import ttk
 # ↑ tambien importamos la libreria ttk que nos permite hacer tablas.
 from PIL import ImageTk, Image
-# ↑ PIL es una libreria para redimencionar imagenes
+# ↑ PIL es una libreria para redimensionar imagenes
 from cont_bdata import *
 
 
@@ -46,14 +46,14 @@ ipv6 = tk.StringVar ()
 mac_addr = tk.StringVar ()
 usser = tk.StringVar ()
 tipo_e = tk.StringVar()
-# ↑ esta aproposito para que no interfiera con el codigo
+# ↑ esta a proposito para que no interfiera con el codigo
 
 #↓ lugar donde estan las etiquetas y entradas
-        # ↓ pociciones en Y de las entradas
+        # ↓ posiciones en Y de las entradas
 Y_entr = [100, 175,]
-        # ↓ pociciones en Y de las etiquetas
+        # ↓ posiciones en Y de las etiquetas
 Y_etiqu = [70, 150,]
-        # ↓ pociciones en x de las etiquetas y entradas
+        # ↓ posiciones en x de las etiquetas y entradas
 X_pos = [15, 202, 388, 574, 670, 780]
 
 # ↓ tamaño y fuente de la letra usada
@@ -61,10 +61,10 @@ Tam_y_Letr = ('vladimir', 12)
 tam_letr_bot = ('vladimir', 18)
 
 
-# ↓ comienso de la ventana
+# ↓ comienzo de la ventana
 fondo_ventana = tk.Label(ventana, image= fond_vent[1])
 fondo_ventana.pack()
-# ↓ comienso de la ventana
+# ↓ comienzo de la ventana
 etiq_titulo = tk.Label (ventana, text= 'almacenamiento de datos de dispositivos') 
 etiq_titulo.place(x=60, y=5,)
 etiq_titulo.config (bg= Celeste,
@@ -131,7 +131,7 @@ entr_user = tk.Entry (ventana, textvariable= usser, )
 entr_user.place (x=X_pos[1], y=Y_entr [1],)
 entr_user.config(font= Tam_y_Letr)
 
-# ↓ etiquetas que marca la entrada los usuarios
+# ↓ etiquetas que marca la entrada de los usuarios
 etiq_user = tk.Label (ventana, text= '↓ dispositivo')  
 etiq_user.place(x=X_pos[2], y= Y_etiqu [1],)
 etiq_user.config(bg= Azul_Cielo,
@@ -157,17 +157,17 @@ boton_borrar = tk.Button(ventana, image= botones [2],)
 boton_borrar.place (x=(X_pos[3] +4 ), y= Y_etiqu [1],)
 
 
-# ↓ crear un exel con los datos.
+# ↓ crear un excel con los datos.
 boton_exel = tk.Button(ventana, image= botones [3],)
 boton_exel.place (x= (X_pos[4] +20 ), y= Y_etiqu [1],)
 
 
-# ↓ crear un exel con los datos.
+# ↓ crear un excel con los datos.
 boton_ping = tk.Button(ventana, image= botones [4],)
 boton_ping.place (x= X_pos[5], y= Y_etiqu [0],)
 
 
-# ↓ crear un exel con los datos.
+# ↓ crear un excel con los datos.
 boton_ping = tk.Button(ventana, image= botones [5],)
 boton_ping.place (x= X_pos[5], y= Y_etiqu [1],)
 
