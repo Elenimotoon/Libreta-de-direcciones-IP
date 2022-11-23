@@ -1,5 +1,7 @@
+# Acá ignoro la carpeta de Fondos, aunque temporalmente va a ser gif para que generen la carpera
+/Libreta IP/Fondos/*.gif
 *.jpg
-*.gif
+# Acá ignoro los archivos que se generan al abrir las libretas y juegos, también los errores
 *.pyc
 ag.txt
 *.db

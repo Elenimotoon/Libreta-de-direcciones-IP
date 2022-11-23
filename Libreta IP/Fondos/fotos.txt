@@ -1,0 +1,1 @@
+Añadan las fotos en esta carpeta. Este documento solo es para que se les genere la ruta (Carpeta) ya que ignoramos los binarios
