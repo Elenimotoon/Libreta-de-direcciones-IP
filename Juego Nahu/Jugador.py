@@ -11,7 +11,7 @@ with open('EscenariosPrincipales.json', 'r') as archivo:
             vida_inicial = datos["HISTORY"]["CHAPTERS"][0]["INITIAL_HEALTH"]
             # Compruebo que vida_inicial no esté vacía, que tenga la opción para establecer nombres
             # y que esté activa, de lo contrario no se permitirá iniciar el juego
-            if len(vida_inicial) == 0 or not "SET_HEALTH" in vida_inicial or not vida_inicial["SET_HEALTH"]:
+            if len(vida_inicial) == 0 and not "SET_HEALTH" in vida_inicial and not vida_inicial["SET_HEALTH"]:
                 self.salud = 0
                 return
             # Establezco la salud inicial a la elegida en el capitulo 1
@@ -25,16 +25,21 @@ with open('EscenariosPrincipales.json', 'r') as archivo:
             simbolo_izquierdo = opciones_de_vida["HEALTH_BAR"]["LEFT_HEALTH_BAR_SYMBOL"]
             simbolo_derecho = opciones_de_vida["HEALTH_BAR"]["RIGHT_HEALTH_BAR_SYMBOL"]
             
+            # Creo por defecto acciones vacías antes de comprobar que existen
             NUMERIC_HEALTH = ''
             PERCENT_HEALTH = ''
             HEALTH_BAR = ''
             PROTAGONIST_STATS = ''
+            
             formato_de_salud = opciones_de_vida["HEALTH_FORMAT"]
+            # Utilizo una expresión regular para transformar los datos entre llaves {} a valores
             filtro = re.findall(r'\{([^}]+)\}', formato_de_salud)
             barra_de_vida = opciones_de_vida["HEALTH_BAR"] and opciones_de_vida["HEALTH_BAR"]["HEALTH_BAR_DISPLAY"]
             
             def obtener_barra_de_vida(salud):
+                # Obtengo la cantidad de símbolos posibles dentro del máximo de vida
                 simbolos_convertidos = int(salud_maxima/cantidad_de_simbolos)
+                # Obtengo la cantidad de símbolos que pueden ir dentro de la salud
                 simbolos_actuales = int(salud/simbolos_convertidos)
                 salud_restante = cantidad_de_simbolos - simbolos_actuales
                 
@@ -53,6 +58,8 @@ with open('EscenariosPrincipales.json', 'r') as archivo:
                 HEALTH_BAR = obtener_barra_de_vida(self.salud)
             
             if opciones_de_vida["HIDDEN_STATS"]:
+                # Si el personaje está bien en algún sentido de salud entonces
+                # se va ocultar solo donde esté bien
                 if NUMERIC_HEALTH == salud_maxima:
                     NUMERIC_HEALTH = ''
                 if PERCENT_HEALTH == '100%':
@@ -61,7 +68,11 @@ with open('EscenariosPrincipales.json', 'r') as archivo:
                     HEALTH_BAR = ''
             
             for s in filtro:
+                # Reemplazo el string entre llaves por el valor al que mencionan
                 formato_de_salud = re.sub('{'+s+'}', str(eval(s)), formato_de_salud)
             
             return formato_de_salud
+"""
+Prueba
 input(Jugador().SaludPersonaje())
+"""
