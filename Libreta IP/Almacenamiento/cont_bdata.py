@@ -12,7 +12,6 @@ def crear_tabla():
     conec = sq.connect ('pcbd.db')
     cursor = conec.cursor ()
     cursor.execute("""CREATE TABLE pcbd (
-                    ID integer,
                     equipos text,
                     ipv4 text,
                     ipv6 text,
@@ -25,10 +24,10 @@ def crear_tabla():
     conec.close()
 
 
-def ins_datos(ID, equipos, ipv4, ipv6, macc, usuario, tipo):
+def ins_datos(equipos, ipv4, ipv6, macc, usuario, tipo,):
     conec = sq.connect ('pcbd.db')
     cursor = conec.cursor ()
-    instr = f"INSERT INTO pcbd VALUES ('{ID}','{equipos}', '{ipv4}', '{ipv6}', '{macc}', '{usuario}', '{tipo}')"
+    instr = f"INSERT INTO pcbd VALUES ('{equipos}', '{ipv4}', '{ipv6}', '{macc}', '{usuario}', '{tipo}')"
     cursor.execute(instr)
     print ('se agregaron datos las colimnas')
     conec.commit()
@@ -44,27 +43,26 @@ def leer_datos():
     conec.commit()
     conec.close()
     print (datos)
+    return datos
+
     
 def eliminar_filas (equipo):
     conec = sq.connect('pcbd.db')
     cursor = conec.cursor()
-    instruc = f"DELETE FROM pcbd WHERE name= '{equipo}'"
+    instruc = f"DELETE FROM pcbd WHERE equipos= '{equipo}'"
     print ('se a borrado estos datos')
     cursor.execute(instruc)
     conec.commit()
     conec.close()
 
-def editar_datos (ID, equipos, ipv4, ipv6, macc, usuario, tipo):
+def editar_datos (equipos, ipv4, ipv6, macc, usuario, tipo):
     conec = sq.connect('pcbd.db')
     cursor = conec.cursor()
-    instruc = f"INSERT INTO pcbd VALUES ('{ID}','{equipos}', '{ipv4}', '{ipv6}', '{macc}', '{usuario}', '{tipo}')"
+    instruc = f"INSERT INTO pcbd VALUES ('{equipos}', '{ipv4}', '{ipv6}', '{macc}', '{usuario}', '{tipo}')"
     cursor.execute(instruc)
     conec.commit()
     conec.close()
 
     
 if __name__ == '__main__':
-    #crearBD()
-    #crear_tabla()
-    #ins_datos ('sad', 'hjdfds', 'dasda', 'sda', 'asdasd', 'asdasd',)
     leer_datos()
