@@ -11,6 +11,11 @@ from PIL import ImageTk, Image
 # ↑ PIL es una libreria para redimencionar imagenes
 from ipaddress import ip_address, IPv4Address, IPv6Address
 # ↑ es para comprobar y validar la ip
+#↓ estos son para crear el exel y los envia a la carpeta de documentos
+import xlsxwriter
+from time import sleep
+import shutil 
+
 from time import sleep
 from platform import system
 from subprocess import call
@@ -39,7 +44,7 @@ def lable_var(pal_var, pos_x=15, pos_y=475):
     etiq_var.config(fg=blanco,
                     bg=negro,
                     font=Tam_y_Letr)
-    etiq_user.after(3000, lambda: etiq_var.destroy())
+    etiq_var.after(3000, lambda: etiq_var.destroy())
     #↑ esta linea desaparece la etiqueta
 
 def camb_imag(imagn, tam1, tam2):
@@ -63,6 +68,10 @@ def ping_ipv6():
     sleep(3)
     devol = ping(col3)
     lable_var(devol)
+    if devol == 0:
+        lable_var(f'la ip {col3} esta en uso')
+    elif devol != 0:
+        lable_var(f'la ip {col3} no esta conectada o no esta en uso')
 
 def ping_ipv4():
     col2 = ipv4.get()
@@ -73,7 +82,7 @@ def ping_ipv4():
     if devol == 0:
         lable_var(f'la ip {col2} esta en uso')
     elif devol != 0:
-        lable_var(f'la ip {col2} no esta conectada')
+        lable_var(f'la ip {col2} no esta conectada o no esta en uso')
 
 def verificar_mac_address(address):
     regex = ("^([0-9A-Fa-f]{2}[:-])" +
@@ -224,6 +233,23 @@ def cambiar_fondo(direccion):
     
     fondo_ventana.config(image=fond_vent[imagen[0]])
     fondo_ventana.pack()
+    
+
+
+def Crear_excel () :
+    lista_cruda = leer_datos()
+    archivo=xlsxwriter.Workbook('directorio-ip.xlsx')
+    hoja=archivo.add_worksheet()
+    for i in range(len(lista_cruda)):
+        fila = list (lista_cruda[i])
+        for c in range(len(fila)):
+            hoja.write(i, c, fila[c])
+    archivo.close()
+    
+    sleep(10)
+    shutil.move ('directorio-ip.xlsx', "C:/Users/Public/Documents")
+    lable_var('se a creado un excel en la carpeta DOCUMENTOS PUBLICOS')
+
 
 # colores
 Celeste = 'cadetblue1'
@@ -276,8 +302,9 @@ tam_letr_bot = ('vladimir', 18)
 # ↓ comienso de la ventana
 etiq_titulo = tk.Label(ventana, text='Almacenamiento de Datos de Dispositivos') 
 etiq_titulo.place(x=110, y=14)
-etiq_titulo.config(bg=Celeste,
-                    font=("Verdana", 24))
+etiq_titulo.config (fg=blanco,
+                    bg=negro,
+                 font=Tam_y_Letr)
 
 # ↓ etiqueta sirve para identificar donde va el nombre del dispositivo
 etiq_disp = tk.Label(ventana, text='↓ Nombre del dispositivo') 
@@ -373,7 +400,7 @@ boton_borrar.config(fg=blanco,
                     font=tam_letr_bot)
 
 # ↓ crear un exel con los datos.
-boton_exel = tk.Button(ventana, text='Excel ')
+boton_exel = tk.Button(ventana, text='Excel ', command=Crear_excel )
 boton_exel.place(x=(X_pos[4] + 20), y=(Y_etiqu[1] + 1))
 boton_exel.config(fg=blanco,
                     bg=color_botones,
