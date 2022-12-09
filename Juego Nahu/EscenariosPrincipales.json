@@ -113,11 +113,11 @@
                 "OPTIONAL_TEXT": null,
                 "OPTIONS": [
                     {
-                        "NAME": 1)"Ir hacia la izquierda",
+                        "NAME":"1)Ir hacia la izquierda",
                         "ACTION": null,
                     }
                     {
-                        "NAME":2)"Ir hacia la derecha"
+                        "NAME":"2)Ir hacia la derecha"
                         "ACTION": null,
                 ],
                 "PROTAGONIST_STATS": {
