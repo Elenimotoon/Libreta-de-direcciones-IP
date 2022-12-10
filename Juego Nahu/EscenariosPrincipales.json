@@ -31,7 +31,7 @@
         "PROLOG": "Una noche cualquiera, nuestro personaje se va a dormir, y luego de dormir, el siente que se despierta, pero se despierta en una realidad totalmente diferente, al ir a su armario, se encuentra con prendas de un origen desconocido y medianamente antiguas, las cuales se termina por poner, luego de salir de su hogar, se encuentra en un mundo distinto, en una aldea remota, luego de salir de esa aldea, nuestro personaje se pierde en un bosque, y a partir de ahí, comienza su aventura para poder volver a su mundo real\n¿Logrará hacerlo?",
         "CHAPTERS": [
             {
-                "CHAPTER_NAME":"cAPITULO 1":"El bosque de las almas perdidas",
+                "CHAPTER_NAME":"Capitulo 1: El bosque de las almas perdidas",
                 "INITIAL_HEALTH": {
                     "SET_HEALTH": true,
                     "NEW_HEALTH": 100
@@ -101,12 +101,11 @@
                 }
             },
             {
-                "CHAPTER_NAME": "Capitulo 2":"La ruta misteriosa" ,
+                "CHAPTER_NAME": "Capitulo 2: La ruta misteriosa" ,
                 "INITIAL_HEALTH": {
                     "SET_HEALTH": false
                 },
-                "STORYTELLER":"Luego de avanzar un poco, nuestro protagonista se encuentra con una división hacia 2 caminos, ambos marcados por un poste de madera y flechas del mismo material.",
-                "STORYTELLER":"La que está arriba dice 'cueva minera', indicada por una flecha a la izquierda, y la que está abajo dice 'Iglesia O'Conner' ,indicada por una flecha hacia la derecha."
+                "STORYTELLER":"Luego de avanzar un poco, nuestro protagonista se encuentra con una división hacia 2 caminos, ambos marcados por un poste de madera y flechas del mismo material.\n\nLa que está arriba dice «Cueva Minera», indicada por una flecha a la izquierda, y la que está abajo dice «Iglesia O'Conner» ,indicada por una flecha hacia la derecha.",
                 "INTERNAL_VOICE": "Deberia ir a la izquierda o a la derecha?",
                 "NARRATOR_VOICE": null,
                 "PROTAGONIST_DIALOGUE": null,
@@ -114,11 +113,12 @@
                 "OPTIONS": [
                     {
                         "NAME":"1)Ir hacia la izquierda",
-                        "ACTION": null,
-                    }
+                        "ACTION": null
+                    },
                     {
-                        "NAME":"2)Ir hacia la derecha"
-                        "ACTION": null,
+                        "NAME":"2)Ir hacia la derecha",
+                        "ACTION": null
+                    }
                 ],
                 "PROTAGONIST_STATS": {
                     "DAMAGE": null,
